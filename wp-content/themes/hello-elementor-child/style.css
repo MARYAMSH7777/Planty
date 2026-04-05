@@ -96,42 +96,51 @@ body {
 .site-footer {
     margin-top: auto;
 }
-.planty-order-page {
-    background: #3b8e46;
-    max-width: 860px;
+.planty-order-page,
+.planty-order-form-wrapper {
+    max-width: 1180px;
     margin: 0 auto;
-    padding: 70px 120px 60px;
+    background: #3f8f4a;
+    box-sizing: border-box;
+}
+
+.planty-order-page {
+    padding: 70px 140px 40px;
+    color: #fff;
+}
+
+.planty-order-form-wrapper {
+    padding: 0 140px 70px;
     color: #fff;
 }
 
 .planty-order-title {
+    margin: 0 0 45px;
     text-align: center;
     color: #fff;
-    font-size: 38px;
+    font-size: 48px;
     font-weight: 800;
     text-transform: uppercase;
-    margin: 0 0 40px;
 }
 
 .planty-order-separator {
     height: 1px;
+    margin: 0 0 38px;
     background: rgba(255, 255, 255, 0.7);
-    margin: 0 0 35px;
 }
 
 .planty-order-products h2 {
+    margin: 0 0 30px;
     color: #fff;
-    font-size: 26px;
+    font-size: 30px;
     font-weight: 700;
-    margin: 0 0 25px;
 }
 
 .planty-product-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
-    align-items: start;
-    margin-bottom: 35px;
+    margin-bottom: 38px;
 }
 
 .planty-product-card img {
@@ -140,69 +149,6 @@ body {
     height: auto;
 }
 
-.planty-order-page + .wpcf7 {
-    background: #3b8e46;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 120px 70px;
-}
-
-.planty-order-page + .wpcf7 form {
-    color: #fff;
-}
-
-.planty-order-page + .wpcf7 h3 {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0 0 24px;
-}
-
-.planty-order-page + .wpcf7 p {
-    margin: 0 0 18px;
-}
-
-.planty-order-page + .wpcf7 label {
-    display: block;
-    color: #fff;
-    font-size: 20px;
-    margin-bottom: 8px;
-}
-
-.planty-order-page + .wpcf7 input[type="text"],
-.planty-order-page + .wpcf7 input[type="email"],
-.planty-order-page + .wpcf7 input[type="number"],
-.planty-order-page + .wpcf7 textarea {
-    width: 100%;
-    border: none;
-    border-radius: 7px;
-    background: #fff;
-    padding: 14px 16px;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-
-.planty-order-page + .wpcf7 input[type="number"] {
-    max-width: 60px;
-    text-align: center;
-    padding: 10px 8px;
-}
-
-.planty-order-page + .wpcf7 input[type="submit"] {
-    display: block;
-    margin: 30px auto 0;
-    background: #d8a29a;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    padding: 16px 48px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.planty-order-page + .wpcf7 input[type="submit"]:hover {
-    background: #c78f86;
-}
 .planty-order-form {
     margin-top: 40px;
 }
@@ -211,71 +157,62 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 22px;
-    align-items: start;
-    margin-bottom: 40px;
+    margin-bottom: 55px;
 }
 
 .planty-quantity-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
+    text-align: center;
 }
 
 .planty-quantity-item label {
+    display: block;
     margin-bottom: 14px;
-    font-size: 20px;
     color: #fff;
+    font-size: 20px;
 }
 
 .planty-quantity-item input[type="number"] {
-    width: 50px !important;
+    width: 50px;
     height: 56px;
-    padding: 0;
-    text-align: center;
     border: none;
     border-radius: 0;
     background: #fff;
+    text-align: center;
+    padding: 0;
 }
 
 .planty-order-infos-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 60px;
     position: relative;
-    margin-top: 35px;
 }
 
 .planty-order-infos-wrapper::before {
     content: "";
     position: absolute;
+    top: 8px;
+    bottom: 8px;
     left: 50%;
-    top: 10px;
-    bottom: 10px;
     width: 1px;
     background: rgba(255, 255, 255, 0.7);
     transform: translateX(-50%);
 }
 
-.planty-order-infos-block,
-.planty-order-delivery-block {
-    color: #fff;
-}
-
 .planty-order-infos-block h3,
 .planty-order-delivery-block h3 {
+    margin: 0 0 28px;
     color: #fff;
     font-size: 30px;
     font-weight: 700;
-    margin: 0 0 28px;
 }
 
 .planty-order-infos-block label,
 .planty-order-delivery-block label {
     display: block;
+    margin: 0 0 11px;
     color: #fff;
     font-size: 20px;
-    margin: 0 0 11px;
 }
 
 .planty-order-infos-block p,
@@ -296,69 +233,38 @@ body {
 }
 
 .planty-order-submit {
+    margin-top: 24px;
     text-align: center;
-    margin-top: 18px;
 }
+
+.planty-order-submit input[type="submit"] {
+    width: 198px;
+    height: 55px;
+    border: none;
+    border-radius: 5px;
+    background: #d8a29a;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.planty-order-submit input[type="submit"]:hover {
+    background: #c78f86;
+}
+
 .planty-cans-band {
     height: 55px;
-    background-image: url('URL_CANETTE');
     background-repeat: repeat-x;
     background-position: center;
     background-size: auto 55px;
 }
-.planty-order-page,
-.planty-order-page + .wpcf7 {
-    max-width: 1180px;
-    width: calc(100% - 80px);
-}
-
-.planty-order-page {
-    padding: 70px 240px 40px;
-}
-
-.planty-order-page + .wpcf7 {
-    padding: 0 240px 70px;
-    margin-top: -1px;
-}
-
-.planty-order-title {
-    font-size: 48px;
-    letter-spacing: 1px;
-}
-
-.planty-order-products h2 {
-    font-size: 30px;
-}
-
-.planty-product-grid {
-    gap: 24px;
-}
-
-.planty-quantity-item label {
-    font-size: 20px;
-}
-
-.planty-order-infos-wrapper {
-    gap: 70px;
-}
-
-.planty-order-infos-block h3,
-.planty-order-delivery-block h3 {
-    font-size: 30px;
-}
-
-.planty-order-infos-block input[type="text"],
-.planty-order-infos-block input[type="email"],
-.planty-order-delivery-block input[type="text"] {
-    height: 71px;
-}
 
 @media (max-width: 1200px) {
     .planty-order-page {
-        padding: 60px 120px 40px;
+        padding: 60px 80px 35px;
     }
 
-    .planty-order-page + .wpcf7 {
-        padding: 0 120px 60px;
+    .planty-order-form-wrapper {
+        padding: 0 80px 60px;
     }
 }

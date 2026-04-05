@@ -1,0 +1,1 @@
+/Users/yassine/Local Sites/planty/app/public/wp-content/plugins/query-monitor/wp-content/db.php
