@@ -44,7 +44,7 @@
   width: 236px;
   height: 80px;
   padding: 0;
-  background-color: #d89a93 ;
+  background-color: #E0B9B4 ;
   color: #ffffff ;
   font-size: 16px;
   font-weight: 700;
@@ -68,94 +68,93 @@
 }
 
 /* ===== PRECOMMANDE ===== */
+
 .planty-order-form {
-  max-width: 980px;
+  max-width: 900px;
   margin: 60px auto 0;
+  color: #ffffff;
 }
 
-.planty-order-form,
 .planty-order-form label,
 .planty-order-form h3,
 .planty-order-form p {
   color: #ffffff;
 }
 
-/* Séparateur */
-.planty-separator {
-  border: none;
-  border-top: 1px solid rgba(255, 255, 255, 0.6);
-  width: 82%;
-  max-width: 820px;
-  margin: 40px auto;
-}
-
 /* Quantités */
 .planty-quantities {
   display: flex;
   justify-content: center;
-  gap: 46px;
-  margin-top: 18px;
-  margin-bottom: 34px;
+  gap: 100px;
+  margin: 1px auto 34px;
 }
 
 .planty-quantity-field {
-  width: 148px;
+  width: 120px;
   display: flex;
   justify-content: center;
 }
 
-.planty-quantity-field input[type="number"] {
-  width: 39px;
-  height: 56px;
-  padding: 0;
-  margin: 0;
-  text-align: center;
-  font-size: 18px;
-  line-height: 56px;
-  border: none;
-  border-radius: 0;
-  background: #ffffff;
-  color: #000000;
-  box-sizing: border-box;
-}
 
-/* Si tu veux cacher les flèches du champ number, décommente ceci */
-/*
-.planty-quantity-field input[type="number"] {
+
+.planty-quantity-field input.wpcf7-form-control.wpcf7-number {
+  width: 36px !important;
+  height: 48px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-size: 18px !important;
+  text-align: center !important;
+  line-height: normal !important;
+  box-sizing: border-box !important;
   appearance: textfield;
-  -moz-appearance: textfield;
 }
 
-.planty-quantity-field input[type="number"]::-webkit-outer-spin-button,
-.planty-quantity-field input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+.planty-quantity-field input.wpcf7-form-control.wpcf7-number::-webkit-input-placeholder {
+  color: #000000;
 }
-*/
 
-/* Bloc infos + livraison */
+.planty-quantity-field input.wpcf7-form-control.wpcf7-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Séparateur du milieu uniquement */
+.planty-separator {
+  border: none;
+  border-top: 1px solid #ffffff;
+  
+  margin: 34px auto 42px;
+}
+
+
+
+/* Bloc Vos informations + Livraison */
 .planty-infos-grid {
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 40px;
-  max-width: 900px;
-  margin: 42px auto 0;
+  gap: 34px;
+  max-width: 860px;
+  margin: 70px auto 0;
 }
 
 .planty-infos-grid::before {
   content: "";
   position: absolute;
   left: 50%;
-  top: 16px;
-  transform: translateX(-50%);
+  
   width: 1px;
-  height: 380px;
+  height: 520px;
   background: rgba(255, 255, 255, 0.6);
 }
 
 .planty-column {
-  flex: 0 0 380px;
+  flex: 0 0 360px;
 }
 
 .planty-column h3 {
@@ -173,7 +172,7 @@
 .planty-order-form input[type="text"],
 .planty-order-form input[type="email"] {
   width: 100%;
-  height: 60px;
+  height: 68px;
   border: none;
   border-radius: 7px;
   background: #ffffff;
@@ -182,12 +181,11 @@
   box-sizing: border-box;
 }
 
-/* Bouton submit */
+/* Bouton */
 .planty-submit {
-  width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 26px;
+  margin-left: 80px;
 }
 
 .planty-submit input[type="submit"] {
@@ -196,74 +194,206 @@
   padding: 0;
   border: none;
   border-radius: 5px;
-  background-color: #d89a93;
+  background-color: #E0B9B4;
   color: #ffffff;
   font-size: 15px;
   cursor: pointer;
 }
 
 .planty-submit input[type="submit"]:hover {
-  background-color: #c98780;
-}
-/* ===== PAGE NOUS RENCONTRER ===== */
-
-/* Bloc hero */
-.rencontre-hero {
-  border-bottom-left-radius: 50% 18%;
-  border-bottom-right-radius: 50% 18%;
-  overflow: hidden;
-}
-
-/* Texte du hero */
-.rencontre-hero .elementor-heading-title {
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-/* Section équipe */
-.section-equipe .equipe-list {
-  display: flex;
-  justify-content: center;
-  gap: 70px;
+  background-color: #E0B9B4;
 }
 
 /* ===== PAGE NOUS RENCONTRER ===== */
 
-/* Bloc hero */
+/* HERO */
 .rencontre-hero {
-  border-bottom-left-radius: 50% 18%;
-  border-bottom-right-radius: 50% 18%;
+  background: #ece2da;
+  padding: 45px 20px 75px;
+  border-bottom-left-radius: 50% 16%;
+  border-bottom-right-radius: 50% 16%;
   overflow: hidden;
 }
 
-/* Texte du hero */
-.rencontre-hero .elementor-heading-title {
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-/* Section équipe */
-.section-equipe .equipe-list {
+.rencontre-hero-inner {
   display: flex;
   justify-content: center;
-  gap: 70px;
+  align-items: center;
+  gap: 45px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Formulaire contact */
-.planty-contact-form {
+.rencontre-hero .elementor-heading-title {
+  color:black;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  line-height: 1.1;
+}
+
+.rencontre-hero p {
+  max-width: 520px;
+  margin: 14px auto 0;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #000000;
+  text-align: center;
+}
+
+/* EQUIPE */
+.section-equipe {
+  background: #ffffff;
+  padding: 70px 20px 55px;
+}
+
+.section-equipe .elementor-heading-title {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.equipe-list {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 80px;
+  max-width: 900px;
+  margin: 45px auto 0;
+}
+
+.equipe-item {
+  text-align: center;
+  width: 180px;
+}
+
+.equipe-item img {
+  width: 168px;
+  height: 168px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.equipe-item .elementor-heading-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.equipe-item p {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #666666;
+  text-align: center;
+}
+
+
+.equipe-leaf-right {
+  position: absolute;
+  right: 40px;
+  bottom: -70px;
+}
+
+.equipe-leaf-right img {
+  width: 191.2109375px;
+  height: 219.0758819580078px;
+  display: block;
+}
+
+/* CONTACT */
+.contact-section {
+  background: #ece2da;
+  padding: 40px 20px 0;
+}
+
+.contact-section .elementor-heading-title {
+  color: #000000;
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.contact-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  max-width: 720px;
+  margin: 35px auto 0;
+}
+
+
+.contact-form-wrap {
+  width: 340px;
   max-width: 340px;
-  max-height: 71;
+  flex: 0 0 340px;
+}
+
+/* CF7 */
+.planty-contact-form {
+  width: 100%;
+}
+
+.planty-contact-form p {
+  margin: 0 0 18px;
 }
 
 .planty-contact-form label {
-  
+  display: block;
   color: #000000;
-  
+  font-size: 15px;
+  margin-bottom: 8px;
 }
 
+.planty-contact-form input[type="text"],
+.planty-contact-form input[type="email"],
+.planty-contact-form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
 
+.planty-contact-form input[type="text"],
+.planty-contact-form input[type="email"] {
+  height: 60px;
+  padding: 0 14px;
+}
+
+.planty-contact-form textarea {
+  height: 240px;
+  padding: 14px;
+  resize: none;
+}
 
 .planty-contact-submit {
   text-align: center;
+  margin-top: 12px;
+  margin-left: 50px;
 }
+
+.planty-contact-submit input[type="submit"] {
+  width: 140px;
+  height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #d89a93;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.planty-contact-submit input[type="submit"]:hover {
+  background-color: #c98780;
+
+}
+
+
+
+
 
