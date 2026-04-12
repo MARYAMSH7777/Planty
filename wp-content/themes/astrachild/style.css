@@ -33,6 +33,19 @@
   font-size: 16px;
   color: #000000;
   text-decoration: none;
+  
+}
+/* Hover seulement sur Nous rencontrer */
+.main-header-menu .menu-nous-rencontrer > a:hover {
+  color: #000000 !important;
+  font-weight: bold;
+}
+
+/* Etat actif seulement sur Nous rencontrer */
+.main-header-menu .menu-nous-rencontrer.current-menu-item > a,
+.main-header-menu .menu-nous-rencontrer.current_page_item > a {
+  color: #000000 !important;
+  font-weight: bold;
 }
 
 /* Bouton Commander du header */
@@ -44,17 +57,18 @@
   width: 236px;
   height: 80px;
   padding: 0;
-  background-color: #E0B9B4 ;
-  color: #ffffff ;
+  background-color:#DC9F96;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 700;
   text-decoration: none;
   border-radius: 0;
+  transition: background-color 0.25s ease, color 0.25s ease;
 }
 
 .main-header-menu .menu-commander a:hover {
-  background-color: #c98780 ;
-  color: #ffffff ;
+  background-color:#C02E44;
+  color: #ffffff;
 }
 
 /* ===== FOOTER ===== */
@@ -111,7 +125,7 @@
   line-height: normal !important;
   box-sizing: border-box !important;
   appearance: textfield;
-}
+  font-family: "Inter", sans-serif !important;}
 
 .planty-quantity-field input.wpcf7-form-control.wpcf7-number::-webkit-input-placeholder {
   color: #000000;
