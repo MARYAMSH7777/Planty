@@ -42,11 +42,17 @@
 }
 
 /* Etat actif seulement sur Nous rencontrer */
+
+
+/* Hover + page active : faux gras sans changer la taille */
+.main-header-menu .menu-nous-rencontrer > a:hover,
 .main-header-menu .menu-nous-rencontrer.current-menu-item > a,
 .main-header-menu .menu-nous-rencontrer.current_page_item > a {
   color: #000000 !important;
-  font-weight: bold;
-}
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  }
+  
 
 /* Bouton Commander du header */
 .main-header-menu .menu-commander a,
@@ -111,7 +117,7 @@
 
 
 
-.planty-quantity-field input.wpcf7-form-control.wpcf7-number {
+.planty-quantity-field input.wpcf7-form-control.wpcf7-text {
   width: 36px !important;
   height: 48px !important;
   padding: 0 !important;
@@ -127,11 +133,11 @@
   appearance: textfield;
   font-family: "Inter", sans-serif !important;}
 
-.planty-quantity-field input.wpcf7-form-control.wpcf7-number::-webkit-input-placeholder {
+.planty-quantity-field input.wpcf7-form-control.wpcf7-text::-webkit-input-placeholder {
   color: #000000;
 }
 
-.planty-quantity-field input.wpcf7-form-control.wpcf7-number {
+.planty-quantity-field input.wpcf7-form-control.wpcf7-text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -148,6 +154,83 @@
 
 
 /* Bloc Vos informations + Livraison */
+@media (max-width: 767px) {
+  .planty-order-form {
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .planty-quantities {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+  }
+
+  .planty-quantity-field {
+    width: 60px;
+  }
+
+  .planty-infos-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    max-width: 100%;
+    margin: 50px auto 0;
+  }
+
+  .planty-infos-grid::before {
+    display: none;
+  }
+
+  .planty-column {
+    flex: none;
+    width: 100%;
+  }
+
+  .planty-column h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .planty-order-form input[type="text"],
+  .planty-order-form input[type="email"] {
+    width: 100%;
+    height: 60px;
+  }
+
+  .planty-submit {
+    margin-top: 20px;
+  }
+
+  .planty-submit input[type="submit"] {
+    width: 180px;
+  }
+}
+@media (max-width: 767px) {
+  @media (max-width: 767px) {
+  .precommande-products {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+}
+  .planty-quantities {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 18px !important;
+    margin: 20px auto 34px !important;
+  }
+
+  .planty-quantity-field {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
 .planty-infos-grid {
   position: relative;
   display: flex;
@@ -199,7 +282,8 @@
 .planty-submit {
   display: flex;
   justify-content: center;
-  margin-left: 80px;
+  margin-top: 26px;
+  margin-left: 0;
 }
 
 .planty-submit input[type="submit"] {
