@@ -402,33 +402,57 @@
 }
 
 /* CONTACT */
-.contact-section {
-  background: #ece2da;
-  padding: 40px 20px 0;
-}
-
-.contact-section .elementor-heading-title {
-  color: #000000;
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-}
-
 .contact-row {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 35px;
+  align-items: flex-end;
+  gap: 0;
   max-width: 720px;
   margin: 35px auto 0;
+  position: relative;
+  isolation: isolate;
 }
-
 
 .contact-form-wrap {
   width: 340px;
   max-width: 340px;
   flex: 0 0 340px;
+  position: relative;
+  z-index: 3;
 }
+
+.planty-contact-form {
+  position: relative;
+  z-index: 3;
+}
+
+.planty-contact-form p {
+  position: relative;
+  z-index: 3;
+}
+
+.planty-contact-form textarea,
+.planty-contact-form input[type="text"],
+.planty-contact-form input[type="email"] {
+  position: relative;
+  z-index: 3;
+}
+
+.contact-leaf-left {
+  position: absolute;
+  left: 115px;
+  bottom: 45px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.contact-leaf-left img {
+  width: 147px;
+  height: auto;
+  display: block;
+}
+
+
 
 /* CF7 */
 .planty-contact-form {
