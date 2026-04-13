@@ -91,7 +91,7 @@
 
 .planty-order-form {
   max-width: 900px;
-  margin: 60px auto 0;
+  margin: 1px auto 0;
   color: #ffffff;
 }
 
@@ -106,11 +106,10 @@
   display: flex;
   justify-content: center;
   gap: 100px;
-  margin: 1px auto 34px;
+  margin-top: 10px;
 }
 
 .planty-quantity-field {
-  width: 120px;
   display: flex;
   justify-content: center;
 }
@@ -282,8 +281,7 @@
 .planty-submit {
   display: flex;
   justify-content: center;
-  margin-top: 26px;
-  margin-left: 0;
+  margin-left: 70px;
 }
 
 .planty-submit input[type="submit"] {
