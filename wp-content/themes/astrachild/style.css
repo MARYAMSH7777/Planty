@@ -299,15 +299,21 @@
 .planty-submit input[type="submit"]:hover {
   background-color: #E0B9B4;
 }
+@media (max-width: 360px){
+ .planty-submit input[type="submit"]{
+  margin-right: 50px;
+ }
 
-/* ===== PAGE NOUS RENCONTRER ===== */
+}
 
-/* HERO */
+/* =========================
+   PAGE NOUS RENCONTRER - HERO
+========================= */
+
 .rencontre-hero {
   background: #ece2da;
   padding: 45px 20px 75px;
-  border-bottom-left-radius: 50% 16%;
-  border-bottom-right-radius: 50% 16%;
+ 
   overflow: hidden;
 }
 
@@ -320,24 +326,64 @@
   margin: 0 auto;
 }
 
-.rencontre-hero .elementor-heading-title {
-  color:black;
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  line-height: 1.1;
-}
-
-.rencontre-hero p {
-  max-width: 520px;
-  margin: 14px auto 0;
-  font-size: 16px;
-  line-height: 1.45;
-  color: #000000;
+.rencontrez-title,
+.rencontre-description {
   text-align: center;
 }
+@media (max-width: 1100px) and (min-width: 1024px) {
+  .rencontre-description {
+    margin-top: 20px !important;
+  }
+}
 
+
+/* Tablette */
+@media (max-width: 767px)  {
+  .rencontre-hero {
+    padding: 40px 20px 70px;
+  }
+
+  .rencontre-hero-inner {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .rencontrez-title {
+    width: 100%;
+  }
+
+  .rencontrez-title .elementor-heading-title {
+    /*margin-left: 20px !important;*/
+    /*text-align: center;*/
+  }
+
+  .rencontre-description p {
+    max-width: 420px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
+
+/* Mobile */
+@media (max-width: 660px) {
+  .rencontre-hero {
+    padding: 40px 20px 80px;
+  }
+
+  .rencontre-hero-inner {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+  }
+
+  .rencontrez-title .elementor-heading-title {
+    margin-left: 20px;
+    text-align: center;
+  }
+
+
+}
 /* EQUIPE */
 .section-equipe {
   background: #ffffff;
@@ -392,7 +438,7 @@
 
 .equipe-leaf-right {
   position: absolute;
-  right: 40px;
+  right: 0px;
   bottom: -70px;
 }
 
@@ -400,7 +446,16 @@
   width: 191.2109375px;
   height: 219.0758819580078px;
   display: block;
+
 }
+
+/*@media (min-width: 1259px){
+  .equipe-leaf-right {
+  position: absolute;
+  right: -60px;
+  bottom: -70px;
+}
+}*/
 
 /* CONTACT */
 .contact-row {
@@ -439,18 +494,33 @@
   z-index: 3;
 }
 
-.contact-leaf-left {
+.elementor .contact-row .contact-leaf-left {
   position: absolute;
-  left: 115px;
-  bottom: 45px;
+  left: 50%;
+  transform: translateX(-230px);
+  bottom: 95px;
   z-index: 1;
   pointer-events: none;
 }
 
-.contact-leaf-left img {
-  width: 147px;
-  height: auto;
-  display: block;
+@media (max-width: 985px) {
+  .elementor .contact-row .contact-leaf-left {
+    transform: translateX(-265px);
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor .contact-row .contact-leaf-left {
+    transform: translateX(-230px);
+    bottom: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .elementor .contact-row .contact-leaf-left {
+    transform: translateX(-230px);
+    bottom: 90px;
+  }
 }
 
 
@@ -513,45 +583,59 @@
 .planty-contact-submit input[type="submit"]:hover {
   background-color: #c98780;
 
+}/* Fix Elementor shape divider overflowing horizontally
+   (SVG height + viewBox aspect ratio computes a width wider than viewport) */
+.elementor-shape svg {
+  width: 100%;
 }
+
+/* Container 3174da3 overflows below 1024px — constrain it to viewport */
+@media (max-width: 1024px) {
+  .elementor-element.elementor-element-3174da3 {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
 /* ===== HERO ACCUEIL  ===== */
 .hero-visual {
-  position: relative;
-  width: 860px;
-  max-width: 100%;
-  height: 1050px;
-  margin: 0 auto;
+  position: relative !important;
+  /*width: 860px !important;*/
+  max-width: 100% !important;
+  height: 700px !important;
+  margin: 0 auto !important;
 }
 
 .hero-leaf-left,
 .hero-leaf-right {
-  position: absolute;
+  position: absolute !important;
   z-index: 1;
+  width: 340px !important;
 }
 
 .hero-leaf-left img,
 .hero-leaf-right img {
   display: block;
-  width: 280px;
+  width: 100% !important;
   height: auto;
 }
 
 .hero-leaf-left {
   left: 50%;
-  transform: translateX(-280px);
-  top: 100px;
+  transform: translateX(-345px);
+  top: 140px;
 }
 
 .hero-leaf-right {
   right: 50%;
-  transform: translateX(280px);
-  top: 100px;
+  transform: translateX(340px);
+  top: 140px;
 }
 
 .hero-can {
   position: relative;
   z-index: 3;
-  width: 315px;
+  width: 415px;
   margin: 0 auto;
 }
 
@@ -562,7 +646,7 @@
 }
 /* ===== HERO ACCUEIL RESPONSIVE ===== */
 
-@media (max-width: 1160px) {
+/*@media (max-width: 1160px) {
   .hero-visual {
     width: 100%;
     max-width: 620px;
@@ -571,18 +655,18 @@
 
   .hero-leaf-left img,
   .hero-leaf-right img {
-    width: 180px;
+    width: 380px;
   }
 
   .hero-leaf-left {
     left: 50%;
-    transform: translateX(-180px);
+    transform: translateX(-260px);
     top: 80px;
   }
 
   .hero-leaf-right {
     right: 50%;
-    transform: translateX(180px);
+    transform: translateX(260px);
     top: 80px;
   }
 
@@ -590,29 +674,47 @@
     width: 200px;
     top: 15px;
   }
-}
+}*/
 
-@media (max-width: 900px) {
-  .hero-visual {
-    max-width: 500px;
-    height: 450px;
+@media (max-width: 1160px) {
+  .hero-can {
+    width: 340px !important;
   }
 
-  .hero-leaf-left img,
-  .hero-leaf-right img {
-    width: 145px;
+  .hero-leaf-left,
+  .hero-leaf-right {
+    width: 280px !important;
   }
 
   .hero-leaf-left {
     left: 50%;
-    transform: translateX(-155px);
-    top: 80px;
+    transform: translateX(-280px);
+    top: 100px;
   }
 
   .hero-leaf-right {
     right: 50%;
-    transform: translateX(155px);
-    top: 80px;
+    transform: translateX(280px);
+    top: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-visual {
+    max-width: 100% !important;
+  }
+
+
+  .hero-leaf-left {
+    left: 50%;
+    transform: translateX(-280px);
+    top: 100px;
+  }
+
+  .hero-leaf-right {
+    right: 50%;
+    transform: translateX(280px);
+    top: 100px;
   }
 
   .hero-can {
@@ -620,64 +722,133 @@
     top: 15px;
   }
 }
+/*@media (max-width: 1160px) {
+  .hero-visual {
+    max-width: 100%;
+    width: 70px;
+  }
+
+  .hero-leaf-left img,
+  .hero-leaf-right img {
+    width: 120px !important;
+  }
+
+  .hero-leaf-left {
+    left: 50%;
+    transform: translateX(-240px);
+    top: 100px;
+  }
+
+  .hero-leaf-right {
+    right: 50%;
+    transform: translateX(240px);
+    top: 100px;
+  }
+
+  .hero-can {
+    width: 190px;
+    top: 15px;
+  }
+}*/
 
 @media (max-width: 767px) {
   .hero-visual {
-    max-width: 320px;
+    position: relative !important;
+    width: 100% !important;
+    /*max-width: 320px !important;*/
+    height: 330px !important;
+    margin: 0 auto !important;
+  }
+
+  .hero-leaf-left,
+  .hero-leaf-right {
+    position: absolute !important;
+    z-index: 1;
+    width: 120px !important;
+    top: 130px;
+    left: 50%;
+    right: auto;
+  }
+
+  .hero-leaf-left img,
+  .hero-leaf-right img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-leaf-left {
+    transform: translateX(-130px);
+  }
+
+  .hero-leaf-right {
+    transform: translateX(10px);
+  }
+
+  .hero-can {
+    position: absolute !important;
+    z-index: 3;
+    width: 165px !important;
+    left: 50%;
+    top: 45px;
+    transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-visual {
+    max-width: 100%;
+    height: 330px !important;
+  }
+
+  .hero-leaf-left img,
+  .hero-leaf-right img {
+    width: 100px !important;
+    top: 10px !important;
+  }
+
+  .hero-leaf-left {
+    transform: translateX(-125px);
+  }
+
+  .hero-leaf-right {
+    transform: translateX(0px);
+  }
+
+  .hero-can {
+    width: 165px !important;
+    top: 45px;
+  }
+}
+@media (max-width: 320px) {
+  .hero-visual {
+    max-width: 100%;
     height: 380px;
   }
 
   .hero-leaf-left img,
   .hero-leaf-right img {
     width: 120px;
+    top: 10px;
   }
 
   .hero-leaf-left {
-    left: 50%;
-    transform: translateX(-130px);
-    top: 80px;
+    transform: translateX(-125px);
   }
 
   .hero-leaf-right {
-    right: 50%;
-    transform: translateX(130px);
-    top: 80px;
+    transform: translateX(2px);
   }
 
   .hero-can {
     width: 165px;
-    top: 25px;
+    top: 45px;
   }
 }
 
-@media (max-width: 480px) {
-  .hero-visual {
-    max-width: 280px;
-    height: 330px;
-  }
 
-  .hero-leaf-left img,
-  .hero-leaf-right img {
-    width: 90px;
-  }
 
-  .hero-leaf-left {
-    left: 50%;
-    transform: translateX(-100px);
-    top: 70px;
-  }
 
-  .hero-leaf-right {
-    right: 50%;
-    transform: translateX(100px);
-    top: 70px;
-  }
-
-  .hero-can {
-    width: 145px;
-    top: 15px;
-  }
-}
 
 
 
